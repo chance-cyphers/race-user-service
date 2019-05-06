@@ -21,7 +21,7 @@ class DbConfig(@Value("\${spring.datasource.url}") val dbUrl: String) {
 //    @Bean
 //    fun liquibase(): SpringLiquibase {
 //        return SpringLiquibase().apply {
-//            changeLog = "classpath:liquibase-changelog.yaml"
+//            changeLog = "classpath:db.changelog-master.yaml"
 //            dataSource = dataSource()
 //        }
 //    }
