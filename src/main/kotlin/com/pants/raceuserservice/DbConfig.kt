@@ -18,4 +18,12 @@ class DbConfig(@Value("\${spring.datasource.url}") val dbUrl: String) {
         return HikariDataSource(config)
     }
 
+//    @Bean
+//    fun liquibase(): SpringLiquibase {
+//        return SpringLiquibase().apply {
+//            changeLog = "classpath:liquibase-changelog.yaml"
+//            dataSource = dataSource()
+//        }
+//    }
+
 }

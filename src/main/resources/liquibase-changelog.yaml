@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - preConditions:
+      - runningAs:
+          username: liquibase
+
+  - changeSet:
+      id: 1
+      author: chance
+      changes:
+        - createTable:
+            tableName: hello
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: greeting
+                  type: varchar(50)
