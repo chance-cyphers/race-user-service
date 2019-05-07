@@ -12,7 +12,7 @@ class WinsController(@Autowired val dataSource: DataSource) {
 
     var counter = 0
 
-    @KafkaListener(topics = ["tuh5qbtu-default"])
+//    @KafkaListener(topics = ["tuh5qbtu-default"])
     fun listen() {
         counter++
     }
