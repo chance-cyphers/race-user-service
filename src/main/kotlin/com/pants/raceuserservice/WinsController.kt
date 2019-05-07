@@ -12,11 +12,6 @@ class WinsController(@Autowired val dataSource: DataSource) {
 
     var counter = 0
 
-//    @KafkaListener(topics = ["tuh5qbtu-default"])
-    fun listen() {
-        counter++
-    }
-
     @RequestMapping("/")
     fun hello(): String {
         return "Race api was visited $counter times, lately"
