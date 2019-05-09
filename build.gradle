@@ -1,10 +1,22 @@
+//buildscript {
+//	dependencies {
+//		classpath 'org.jetbrains.kotlin:kotlin-noarg:1.2.71'
+//	}
+//}
+
 plugins {
 	id 'org.springframework.boot' version '2.1.4.RELEASE'
 	id 'org.jetbrains.kotlin.jvm' version '1.2.71'
 	id 'org.jetbrains.kotlin.plugin.spring' version '1.2.71'
+//	id "org.jetbrains.kotlin.plugin.allopen" version "1.2.71"
 }
 
+//apply plugin: "kotlin-jpa"
 apply plugin: 'io.spring.dependency-management'
+
+//allOpen {
+//	annotation("javax.persistence.Entity")
+//}
 
 group = 'com.pants'
 version = '0.0.1-SNAPSHOT'
@@ -24,11 +36,11 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 
 	implementation 'org.jetbrains.kotlin:kotlin-reflect'
+	implementation 'org.jetbrains.kotlin:kotlin-maven-noarg:1.2.71'
 	implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
 
 	implementation 'org.apache.kafka:kafka-clients:2.0.0'
 	implementation 'org.springframework.kafka:spring-kafka:2.2.2.RELEASE'
-
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
